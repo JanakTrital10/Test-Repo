@@ -1,0 +1,4 @@
+def solve_expression():
+    return 3 * (2 + 4) + 5**2
+
+print(solve_expression())

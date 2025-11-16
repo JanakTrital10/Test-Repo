@@ -1,0 +1,4 @@
+def move_items(lst):
+    return lst[1:] + lst[:1]
+
+print(move_items([1,2,3,4,5]))

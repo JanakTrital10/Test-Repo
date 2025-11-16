@@ -1,0 +1,12 @@
+ones=["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"]
+tens=["","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"]
+ teens=["Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"]
+
+def to_words(n):
+    if n<10: return ones[n]
+    if 10<=n<20: return teens[n-10]
+    if n<100: return tens[n//10] + (" " + ones[n%10] if n%10 else "")
+    if n<1000: return ones[n//100] + " Hundred" + (" " + to_words(n%100) if n%100 else "")
+    if n<10000: return ones[n//1000] + " Thousand" + (" " + to_words(n%1000) if n%1000 else "")
+
+print(to_words(10))
